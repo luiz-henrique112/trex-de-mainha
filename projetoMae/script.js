@@ -6,6 +6,7 @@ var ground
 var gameState = 1
 var parede1, parede2
 var restart, restartImg
+var control = 0
    
 
 
@@ -71,18 +72,18 @@ background("#ffffff")
 
 if(score >=  20 || score > 20){ 
 
+   if(control == 0){
     rebatente()
-
-/*pedra1.bounceOff(parede2)
-pedra2.bounceOff(parede2)
-pedra3.bounceOff(parede2)
-pedra4.bounceOff(parede2)
-
+    control = 1
+    }
 pedra1.bounceOff(parede1)
+pedra1.bounceOff(parede2)
 pedra2.bounceOff(parede1)
+pedra2.bounceOff(parede2)
 pedra3.bounceOff(parede1)
-pedra4.bounceOff(parede1)*/
-
+pedra3.bounceOff(parede2)
+pedra4.bounceOff(parede1)
+pedra4.bounceOff(parede2)
 
 if (pedra1.isTouching(parede1)) {
     pedra1.velocityX = -3
